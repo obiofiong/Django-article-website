@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="details">
+        <h2>{{ list_items.title }} </h2>
+        <p> {{ list_items.text }}</p>
+    </div>
+
+    <h4><a href="{% url 'article_edit' list_items.pk %}">Edit this post</a></h4>
+    <h4><a href="{% url 'article_delete' list_items.pk %}">Delete this post</a></h4>
+
+
+{% endblock %}
